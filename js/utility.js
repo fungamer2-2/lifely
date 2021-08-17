@@ -5,7 +5,7 @@ function randint(min,max){
 
 }
 
-function oneIn(x) {
+function one_in(x) {
 	return x <= 1 || randint(1, x) == 1;
 }
 
