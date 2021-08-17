@@ -134,8 +134,7 @@ function studentEvents(){
 
 	if (isStudent){
 		student_months = student_months + 1;
-		let test_chance = randint(1,10);
-		if (test_chance == 1){
+		if (one_in(10)){
 			student_test();
 		}
 
