@@ -3,7 +3,11 @@ function randint(min,max){
 	let rnum = Math.floor(Math.random()*(max-min+1))+min;
 	return rnum;
 
-};
+}
+
+function one_in(x) {
+	return x <= 1 || randint(1, x) == 1;
+}
 
 function randchoice(array){
 	let randNum = randint(0,array.length-1);
