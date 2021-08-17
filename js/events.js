@@ -316,8 +316,8 @@ function need_house_check(){
 			morale -= randint(1,2);
 		}
 	}
-	if (USER.age/12 == 35 || USER.age/12 == 40 ||
-		USER.age/12 == 45 || USER.age/12 == 50 && !has_house){
+	if ((USER.age/12 == 35 || USER.age/12 == 40 ||
+		USER.age/12 == 45 || USER.age/12 == 50) && !has_house){
 
 		message(`It's recommended that you buy a house`);
 		let html = `
