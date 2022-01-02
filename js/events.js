@@ -147,11 +147,12 @@ function studentEvents(){
 			intellect += randint(1,4);
 			display();
 			var total_years = student_months/12;
-
+			var performance = Math.floor(10 * Math.sqrt(intellect) * (0.9 * Math.random() * 0.2));
+			performance = Math.round(Math.max(0, Math.min(performance, 100)));
 			if (total_years == 1){
 				message(`You've completed your first year in college`);
 				let html = `<br>
-				Your Academic Performance - <b>${randint(30,100)}%</b><br>
+				Your Academic Performance - <b>${performance}%</b><br>
 				`;
 				Swal.fire({
 					heightAuto:false,
@@ -169,7 +170,7 @@ function studentEvents(){
 			else {
 				message(`You've completed ${total_years} years in college`);
 				let html = `<br>
-				Your Academic Performance - <b>${randint(30,100)}%</b><br>
+				Your Academic Performance - <b>${performance}%</b><br>
 				`;
 				Swal.fire({
 					heightAuto:false,
@@ -851,12 +852,9 @@ function surviveAccident(){
 
 
 function randomDiseaseEvents(){
-
-	let chance = randint(1,100);
-	if (chance > 94){
+	if (one_in(20)){
 		disease();
 	}
-
 }
 
 
