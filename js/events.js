@@ -253,6 +253,10 @@ function studentEvents(){
 function jailEvents(){
 
 	if (isJailed){
+		jailDurationSpent += 1;
+		if (jailDuration >= jailDurationSpent){
+			jailOver();
+		};
 		morale -= 1;
 		looks -= 1;
 		jail_months_spent += 1;
